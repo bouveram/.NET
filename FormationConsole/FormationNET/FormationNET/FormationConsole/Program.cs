@@ -12,6 +12,7 @@ namespace FormationConsole
         {
             Console.WriteLine("Hello World !");
             Console.ReadKey();
+
         }
     }
 }
