@@ -1,0 +1,21 @@
+<div class="container-fluid" ng-controller="PhoneListController as pL">
+    <div class="row">
+        <div class="col-md-2">
+            Search: <input ng-model="pL.input" />
+            <br />
+            Sort by:
+            <select ng-model="pL.orderProp">
+                <option value="name">Alphabetical</option>
+                <option value="age">Newest</option>
+            </select>
+        </div>
+        <div class="col-md-10">
+            <ul class="phones">
+                <li ng-repeat="p in pL.phones | filter:pL.input | orderBy:pL.orderProp" class="phone-listing thumbnail">
+                    <phone-item />
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
